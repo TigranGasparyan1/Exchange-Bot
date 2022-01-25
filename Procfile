@@ -1,0 +1,1 @@
+worker: python exchange-bot-2.5.py
