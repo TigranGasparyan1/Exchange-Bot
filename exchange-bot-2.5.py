@@ -33,7 +33,7 @@ def crypto(input, output):
         r = requests.get(f"https://finance.yahoo.com/quote/{input}-{output}", headers=headers)
         html = BS(r.text, 'html.parser')
         crypto = html.find('fin-streamer',class_="Fw(b) Fz(36px) Mb(-4px) D(ib)")
-        if input == 'BTC':
+        if input == 'BTC' or input == 'ETH':
             split = crypto.text.split('.')
             cryptocurrency = float(split[0].replace(',', ''))
 
